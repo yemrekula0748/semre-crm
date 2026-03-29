@@ -1,8 +1,8 @@
 <?php
 
 $urls = [
-    'https://satispanel.org/yunusemre_resmilestir.php',
-    'https://satispanel.org/sevim_resmilestir.php'
+    'https://semre.hpanel.com.tr/yunusemre_resmilestir.php',
+    'https://semre.hpanel.com.tr/sevim_resmilestir.php'
 ];
 
 $repeat = 6;

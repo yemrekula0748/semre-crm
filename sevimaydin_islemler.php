@@ -1,10 +1,10 @@
 <?php
 // 4 farklı URL belirlenir.
 $urls = [
-    "https://satispanel.org/sadi_sevim_fatura_cron.php",
-    "https://satispanel.org/sevimaydin_musteri_olusturma_cron.php",
-    "https://satispanel.org/sevimaydinpttsartliodeme.php",
-    "https://satispanel.org/sevimaydinpttbedelsizodeme.php"
+    "https://semre.hpanel.com.tr/sadi_sevim_fatura_cron.php",
+    "https://semre.hpanel.com.tr/sevimaydin_musteri_olusturma_cron.php",
+    "https://semre.hpanel.com.tr/sevimaydinpttsartliodeme.php",
+    "https://semre.hpanel.com.tr/sevimaydinpttbedelsizodeme.php"
 ];
 
 // Toplam döngü sayısı ve bekleme süresi

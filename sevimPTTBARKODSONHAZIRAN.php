@@ -1,7 +1,7 @@
 <?php
 
-$bedelsizUrl = "https://satispanel.org/sevimaydinpttbedelsizodeme.php";
-$sartliUrl   = "https://satispanel.org/sevimaydinpttsartliodeme.php";
+$bedelsizUrl = "https://semre.hpanel.com.tr/sevimaydinpttbedelsizodeme.php";
+$sartliUrl   = "https://semre.hpanel.com.tr/sevimaydinpttsartliodeme.php";
 
 for ($i = 0; $i < 20; $i++) {
     // Bedelsiz Ödeme URL'sine istek gönder

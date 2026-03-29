@@ -9,13 +9,13 @@ function executeCurl($url) {
 
 for ($i = 0; $i < 50; $i++) {
     // İlk URL'yi çalıştır
-    executeCurl('https://satispanel.org/sadi_yunusemre_musteri_cron.php');
+    executeCurl('https://semre.hpanel.com.tr/sadi_yunusemre_musteri_cron.php');
     
     // 1 saniye bekle
     sleep(1);
     
     // İkinci URL'yi çalıştır
-    executeCurl('https://satispanel.org/yunusemre_fatura_olustur_cron.php');
+    executeCurl('https://semre.hpanel.com.tr/yunusemre_fatura_olustur_cron.php');
     
     // 1 saniye daha bekle
     sleep(1);

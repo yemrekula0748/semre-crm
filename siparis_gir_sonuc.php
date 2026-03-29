@@ -70,27 +70,27 @@ if ($db->query($sql)) {
 // Örnek kullanım:
 if ($kargo == 'Ödeme Şartlı') {
     if ($secureUserName == 'Yunus Emre - Hepsijet') {
-        runAsyncCurl("https://satispanel.org/yunusemrehepsijet.php");
+        runAsyncCurl("https://semre.hpanel.com.tr/yunusemrehepsijet.php");
     } elseif ($secureUserName == 'Sevim Aydın - PTT') {
-        runAsyncCurl("https://satispanel.org/sevimaydinpttsartliodeme.php");
+        runAsyncCurl("https://semre.hpanel.com.tr/sevimaydinpttsartliodeme.php");
     } elseif ($secureUserName == 'Yunus Emre - PTT') {
-        runAsyncCurl("https://satispanel.org/yunusemrepttsartliodeme.php");
+        runAsyncCurl("https://semre.hpanel.com.tr/yunusemrepttsartliodeme.php");
     }
 } elseif ($kargo == 'Bedelsiz') {
     if ($secureUserName == 'Yunus Emre - PTT') {
-        runAsyncCurl("https://satispanel.org/yunusemrepttsartliodeme.php");
+        runAsyncCurl("https://semre.hpanel.com.tr/yunusemrepttsartliodeme.php");
     } elseif ($secureUserName == 'Yunus Emre - Hepsijet') {
-        runAsyncCurl("https://satispanel.org/yunusemrehepsijetbedelsiz.php");
+        runAsyncCurl("https://semre.hpanel.com.tr/yunusemrehepsijetbedelsiz.php");
     } elseif ($secureUserName == 'Sevim Aydın - PTT') {
-        runAsyncCurl("https://satispanel.org/sevimaydinpttbedelsizodeme.php");
+        runAsyncCurl("https://semre.hpanel.com.tr/sevimaydinpttbedelsizodeme.php");
     }
 } elseif ($kargo == 'Ücreti Alıcıdan') {
     if ($secureUserName == 'Yunus Emre - Hepsijet') {
-        runAsyncCurl("https://satispanel.org/yunusemrehepsijetbedelsiz.php");
+        runAsyncCurl("https://semre.hpanel.com.tr/yunusemrehepsijetbedelsiz.php");
     } elseif ($secureUserName == 'Yunus Emre - PTT') {
-        runAsyncCurl("https://satispanel.org/yunusemrepttucretialicidan.php");
+        runAsyncCurl("https://semre.hpanel.com.tr/yunusemrepttucretialicidan.php");
     } elseif ($secureUserName == 'Sevim Aydın - PTT') {
-        runAsyncCurl("https://satispanel.org/sevimaydinpttucretialicidan.php");
+        runAsyncCurl("https://semre.hpanel.com.tr/sevimaydinpttucretialicidan.php");
     }
 }
 
@@ -105,8 +105,8 @@ if ($kargo == 'Ödeme Şartlı') {
 
 // if ($secureUserName === 'Yunus Emre - Hepsijet') {
     // $urls = [
-        // 'https://satispanel.org/sadi_yunusemre_musteri_cron.php',
-        // 'https://satispanel.org/yunusemre_fatura_olustur_cron.php'
+        // 'https://semre.hpanel.com.tr/sadi_yunusemre_musteri_cron.php',
+        // 'https://semre.hpanel.com.tr/yunusemre_fatura_olustur_cron.php'
     // ];
 
     // foreach ($urls as $url) {
@@ -131,9 +131,9 @@ if ($kargo == 'Ödeme Şartlı') {
 	
 	
 	if ($secureUserName == 'Sevim Aydın - PTT') {
-    $url = 'https://satispanel.org/sevimaydin_musteriden_faturaya.php';
+    $url = 'https://semre.hpanel.com.tr/sevimaydin_musteriden_faturaya.php';
 } elseif ($secureUserName == 'Yunus Emre - PTT') {
-    $url = 'https://satispanel.org/yunusemre_musteriden_faturaya.php';
+    $url = 'https://semre.hpanel.com.tr/yunusemre_musteriden_faturaya.php';
 }
 
 if (isset($url)) {

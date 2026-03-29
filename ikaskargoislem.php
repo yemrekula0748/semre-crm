@@ -11,15 +11,15 @@ function ikaskargoIslem($username, $kargo) {
     }
 
     if ($username === "Sevim Aydın - PTT" && $kargo === "Ödeme Şartlı") {
-        sendCurlRequest("https://satispanel.org/sevimaydinpttsartliodeme.php");
-        sendCurlRequest("https://satispanel.org/sevimaydin_musteriden_faturaya.php");
+        sendCurlRequest("https://semre.hpanel.com.tr/sevimaydinpttsartliodeme.php");
+        sendCurlRequest("https://semre.hpanel.com.tr/sevimaydin_musteriden_faturaya.php");
     } elseif ($username === "Sevim Aydın - PTT" && $kargo === "Bedelsiz") {
-        sendCurlRequest("https://satispanel.org/sevimaydinpttbedelsizodeme.php");
+        sendCurlRequest("https://semre.hpanel.com.tr/sevimaydinpttbedelsizodeme.php");
     } elseif ($username === "Yunus Emre - PTT" && $kargo === "Ödeme Şartlı") {
-        sendCurlRequest("https://satispanel.org/yunusemrepttsartliodeme.php");
-        sendCurlRequest("https://satispanel.org/yunusemre_musteriden_faturaya.php");
+        sendCurlRequest("https://semre.hpanel.com.tr/yunusemrepttsartliodeme.php");
+        sendCurlRequest("https://semre.hpanel.com.tr/yunusemre_musteriden_faturaya.php");
     } elseif ($username === "Yunus Emre - PTT" && $kargo === "Bedelsiz") {
-        sendCurlRequest("https://satispanel.org/yunusemrepttbedelsizodeme.php");
+        sendCurlRequest("https://semre.hpanel.com.tr/yunusemrepttbedelsizodeme.php");
     } else {
         echo "Eşleşen bir işlem bulunamadı. Kullanıcı: {$username} / Kargo: {$kargo}\n";
     }
