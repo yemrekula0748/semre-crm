@@ -5,8 +5,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require_once '/home/satispanel/htdocs/satispanel.org/vendor/autoload.php';
-require_once '/home/satispanel/htdocs/satispanel.org/vendor/tecnickcom/tcpdf/tcpdf.php';
+require_once '/home/hpanel-semre/htdocs/semre.hpanel.com.tr/vendor/autoload.php';
+require_once '/home/hpanel-semre/htdocs/semre.hpanel.com.tr/vendor/tecnickcom/tcpdf/tcpdf.php';
 require_once 'DB.php';
 
 $db = new DB();
@@ -19,7 +19,7 @@ if (!$id) {
 }
 
 // Yazı tipi dosyasını tanımla
-$fontPath = '/home/satispanel/htdocs/satispanel.org/Ubuntu-Regular.ttf';
+$fontPath = '/home/hpanel-semre/htdocs/semre.hpanel.com.tr/Ubuntu-Regular.ttf';
 if (!file_exists($fontPath)) {
     die("Yazı tipi dosyası bulunamadı: $fontPath");
 }
