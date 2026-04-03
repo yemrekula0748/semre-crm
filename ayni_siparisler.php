@@ -27,6 +27,9 @@ if (!isset($_SESSION['user_id'])) {
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 
+    <!-- SemreCRM Shared Theme -->
+    <link href="assets/css/semrecrm.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body data-menu-color="light" data-sidebar="default">
@@ -36,18 +39,21 @@ if (!isset($_SESSION['user_id'])) {
         <div class="content-page">
             <div class="content">
                 <div class="container-fluid">
-                    <div class="py-3 d-flex align-items-sm-center flex-sm-row flex-column">
-                        <div class="flex-grow-1">
-                            <h4 class="fs-18 fw-semibold m-0">Girilen Siparişler</h4>
+
+                    <!-- Page Header -->
+                    <div class="crm-page-header">
+                        <div class="crm-header-left">
+                            <h1>Mükerrer Siparişler</h1>
+                            <p>Bugün aynı müşteri adına girilen siparişler</p>
                         </div>
-                        
-                        <!-- Temizle Butonu -->
-                        <form action="siparis_temizle.php" method="POST" style="margin-bottom: 20px;">
-                            <button type="submit" class="btn btn-warning" onclick="return confirm('Mükerrer siparişleri temizlemek istediğinize emin misiniz?')">
-                                Temizle
-                            </button>
-                        </form>
-                    </div>
+                        <div class="crm-header-right">
+                            <form action="siparis_temizle.php" method="POST">
+                                <button type="submit" class="btn btn-warning" onclick="return confirm('Mükerrer siparişleri temizlemek istediğinize emin misiniz?')">
+                                    Temizleri Sil
+                                </button>
+                            </form>
+                        </div>
+                    </div><!-- /crm-page-header -->
 
                     <?php
                     require_once('DB.php');

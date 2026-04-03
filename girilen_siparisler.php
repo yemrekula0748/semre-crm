@@ -52,6 +52,9 @@ if (!isset($_SESSION['user_id'])) {
 
 
     
+    <!-- SemreCRM Shared Theme -->
+    <link href="assets/css/semrecrm.css" rel="stylesheet" type="text/css" />
+
     </head>
 
     <body data-menu-color="light" data-sidebar="default">
@@ -61,12 +64,16 @@ if (!isset($_SESSION['user_id'])) {
             <div class="content-page">
                 <div class="content">
                     <div class="container-fluid">
-                        <div class="py-3 d-flex align-items-sm-center flex-sm-row flex-column">
-                            <div class="flex-grow-1">
-                                <h4 class="fs-18 fw-semibold m-0">Girilen Siparişler</h4>
+
+                        <!-- Page Header -->
+                        <div class="crm-page-header">
+                            <div class="crm-header-left">
+                                <h1>Girilen Siparişler</h1>
+                                <p>Aktif &amp; işlem bekleyen siparişler</p>
                             </div>
+                            <div class="crm-header-right">
                         </div>
-                    
+                        </div><!-- /crm-page-header -->
 
                
 
@@ -90,28 +97,31 @@ if ($sorgu2 && $row2 = $sorgu2->fetch_assoc()) {
     $sayi2 = $row2['toplam'];
 }
 ?>
-<div class="row mb-2">
-    <div class="col-auto">
-        <div class="card border-success shadow-sm" style="min-width:180px; max-width:220px;">
-            <div class="card-body py-2 px-3 text-center">
-                <div class="small text-muted mb-1" style="font-size: 0.95rem;">Web Sitesine Bugün Gelen İkas Sipariş Sayısı</div>
-                <span class="fw-semibold text-success" style="font-size: 1.5rem;"><?= $sayi ?></span>
-            </div>
-        </div>
-    </div>
-    <div class="col-auto">
-        <div class="card border-primary shadow-sm" style="min-width:180px; max-width:220px;">
-            <div class="card-body py-2 px-3 text-center">
-                <div class="small text-muted mb-1" style="font-size: 0.95rem;">Panele Çekilen iKas Sipariş Sayısı</div>
-                <span class="fw-semibold text-warning" style="font-size: 1.5rem;"><?= $sayi2 ?></span>
-            </div>
-        </div>
-    </div>
-</div>       
 
-                        <!-- Butonlar -->
-                        <div class="d-flex justify-content-start align-items-center mb-3">
-                            <!-- Sol tarafta tüm butonlar -->
+                        <!-- Mini iKas Stat Cards -->
+                        <div style="display:flex;gap:0.75rem;margin-bottom:1rem;flex-wrap:wrap;">
+                            <div class="crm-stat-card" style="flex:0 1 200px;padding:0.75rem 1rem;border-left:3px solid #10b981;">
+                                <div class="stat-icon icon-emerald" style="width:36px;height:36px;">
+                                    <svg width="16" height="16" fill="none" stroke="#fff" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19L19 5"/><circle cx="7" cy="7" r="3"/><circle cx="17" cy="17" r="3"/></svg>
+                                </div>
+                                <div class="stat-body">
+                                    <div class="stat-value" style="font-size:1.4rem;"><?= $sayi ?></div>
+                                    <div class="stat-label">Web'e Gelen iKas</div>
+                                </div>
+                            </div>
+                            <div class="crm-stat-card" style="flex:0 1 200px;padding:0.75rem 1rem;border-left:3px solid #6366f1;">
+                                <div class="stat-icon icon-indigo" style="width:36px;height:36px;">
+                                    <svg width="16" height="16" fill="none" stroke="#fff" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                </div>
+                                <div class="stat-body">
+                                    <div class="stat-value" style="font-size:1.4rem;"><?= $sayi2 ?></div>
+                                    <div class="stat-label">Panele Çekilen iKas</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Bar -->
+                        <div class="crm-action-bar">
                             
     <button class="btn btn-success me-2" id="ikasAktarBtn">
         iKas Siparişlerini Aktar
@@ -154,15 +164,13 @@ document.getElementById('ikasAktarBtn').addEventListener('click', function() {
 
 							<button class="btn btn-warning me-2" onclick="window.location.href='export_excel.php'">Excel İndir</button>
                             
-                            <button class="btn btn-warning" id="guncelleBtn">Siparişleri Resmileştir</button>
+                            <button class="btn btn-warning me-2" id="guncelleBtn">Siparişleri Resmileştir</button>
 
-
-
-                            <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#siparisGirModal">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#siparisGirModal">
                                 Sipariş Gir
                             </button>
 
-                        </div>
+                        </div><!-- /crm-action-bar -->
 
 
                     <div class="card">

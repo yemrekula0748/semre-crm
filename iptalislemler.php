@@ -50,6 +50,9 @@ if (!isset($_SESSION['user_id'])) {
 
 
     
+    <!-- SemreCRM Shared Theme -->
+    <link href="assets/css/semrecrm.css" rel="stylesheet" type="text/css" />
+
     </head>
 
     <body data-menu-color="light" data-sidebar="default">
@@ -59,25 +62,18 @@ if (!isset($_SESSION['user_id'])) {
             <div class="content-page">
                 <div class="content">
                     <div class="container-fluid">
-                        <div class="py-3 d-flex align-items-sm-center flex-sm-row flex-column">
-                            <div class="flex-grow-1">
-							<button class="btn btn-warning me-2" onclick="window.location.href='export_excel_gider_hepsijet.php'">HJ YunusEmre</button>
-							<button class="btn btn-warning me-2" onclick="window.location.href='export_excel_gider_yunusemre.php'">PTT YunusEmre</button>
-							<button class="btn btn-warning me-2" onclick="window.location.href='export_excel_gider_sevim.php'">PTT SevimAydın</button>
-                                <h4 class="fs-18 fw-semibold m-0">Girilen Siparişler</h4>
+
+                        <!-- Page Header -->
+                        <div class="crm-page-header">
+                            <div class="crm-header-left">
+                                <h1>Gider Pusulası</h1>
+                                <p>İptal edilen ödeme şartlı siparişler</p>
                             </div>
-                        </div>
-                        
-
-                        <!-- Butonlar -->
-                        <div class="d-flex justify-content-start align-items-center mb-3">
-                            <!-- Sol tarafta tüm butonlar -->
-                           
-						   
-						   
-						   
-						   
-
+                            <div class="crm-header-right">
+                                <button class="btn btn-warning" onclick="window.location.href='export_excel_gider_hepsijet.php'">HJ YunusEmre</button>
+                                <button class="btn btn-warning" onclick="window.location.href='export_excel_gider_yunusemre.php'">PTT YunusEmre</button>
+                                <button class="btn btn-warning" onclick="window.location.href='export_excel_gider_sevim.php'">PTT SevimAydın</button>
+                            </div>
                         </div>
 
 

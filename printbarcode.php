@@ -51,7 +51,10 @@ require_once 'DB.php';
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
 
 	<script src="font.js"></script>
-  
+
+    <!-- SemreCRM Shared Theme -->
+    <link href="assets/css/semrecrm.css" rel="stylesheet" type="text/css" />
+
     </head>
 
     <body data-menu-color="light" data-sidebar="default">
@@ -61,18 +64,18 @@ require_once 'DB.php';
             <div class="content-page">
                 <div class="content">
                     <div class="container-fluid">
-                        <div class="py-3 d-flex align-items-sm-center flex-sm-row flex-column">
-                            <div class="flex-grow-1">
-                                <h4 class="fs-18 fw-semibold m-0">Barkod Alınmayan Siparişler</h4>
-                            </div>
-                        </div>
-                      
 
-                        <!-- Butonlar -->
-                        <div class="d-flex justify-content-start align-items-center mb-3">
-							<button class="btn btn-warning me-2" onclick="window.open('odeme_sartli_toplu.php', '_blank')">ÖDEME ŞARTLI Barkod Çıktısı Al - MH</button>
-                            <button class="btn btn-primary" onclick="printBarcodes()">UA-B Barkod Çıktısı Al</button>
-                        </div>
+                        <!-- Page Header -->
+                        <div class="crm-page-header">
+                            <div class="crm-header-left">
+                                <h1>Barkod Alınmayan Siparişler</h1>
+                                <p>Henüz barkodu basılmamış siparişler</p>
+                            </div>
+                            <div class="crm-header-right">
+                                <button class="btn btn-warning me-2" onclick="window.open('odeme_sartli_toplu.php', '_blank')">ÖDEME ŞARTLI Barkod — MH</button>
+                                <button class="btn btn-primary" onclick="printBarcodes()">UA-B Barkod Çıktısı Al</button>
+                            </div>
+                        </div><!-- /crm-page-header -->
 
                     <div class="card">
                         <div class="card-header">

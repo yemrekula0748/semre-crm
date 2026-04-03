@@ -83,28 +83,8 @@ $result = $db->query($query);
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     
-    <style>
-        .table-dark {
-            background-color: #343a40;
-            color: #fff;
-        }
-        .table-dark th {
-            background-color: #454d55;
-            color: #fff;
-        }
-        .badge {
-            font-size: 0.8rem;
-            padding: 5px 10px;
-        }
-        .btn-red {
-            background-color: #dc3545;
-            color: white;
-        }
-        .btn-red:hover {
-            background-color: #c82333;
-            color: white;
-        }
-    </style>
+    <!-- SemreCRM Shared Theme -->
+    <link href="assets/css/semrecrm.css" rel="stylesheet" type="text/css" />
 </head>
 <body data-menu-color="light" data-sidebar="default">
     <div id="app-layout">
@@ -112,18 +92,21 @@ $result = $db->query($query);
         <div class="content-page">
             <div class="content">
                 <div class="container-fluid">
-                    <div class="py-3 d-flex align-items-sm-center flex-sm-row flex-column">
-                        <div class="flex-grow-1">
-                            <h4 class="fs-18 fw-semibold m-0">Tüm Siparişler</h4>
+
+                    <!-- Page Header -->
+                    <div class="crm-page-header">
+                        <div class="crm-header-left">
+                            <h1>Tüm Siparişler</h1>
+                            <p>Tarihe göre tüm sipariş kayıtları</p>
+                        </div>
+                        <div class="crm-header-right">
+                            <!-- Arama ve Tarih Seçimi -->
+                            <form method="GET" class="d-flex align-items-center gap-2">
+                                <input type="date" name="date" class="form-control" style="width:160px;" value="<?= htmlspecialchars($date); ?>" required>
+                                <button type="submit" class="btn btn-primary">Ara</button>
+                            </form>
                         </div>
                     </div>
-                
-                <!-- Arama ve Tarih Seçimi -->
-                <form method="GET" class="mb-4 d-flex align-items-center">
-                    <input type="date" name="date" class="form-control me-3" value="<?= htmlspecialchars($date); ?>" required>
-                    <!-- <input type="text" name="search" class="form-control me-3" placeholder="Müşteri adı ara" value="<?= htmlspecialchars($search); ?>">-->
-                    <button type="submit" class="btn btn-primary">Ara</button>
-                </form>
 
                 <!-- Sipariş Tablosu -->
                 <div class="card">
