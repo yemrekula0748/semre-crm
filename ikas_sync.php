@@ -1,9 +1,9 @@
 <?php
 $urls = [
-    'https://semre.hpanel.com.tr/sadi_yunusemre_musteri_cron.php',
-    'https://semre.hpanel.com.tr/yunusemre_fatura_olustur_cron.php',
-    'https://semre.hpanel.com.tr/yunusemrehepsijet.php',
-    'https://semre.hpanel.com.tr/yunusemrehepsijetbedelsiz.php'
+    'https://semrepanel.com.tr/sadi_yunusemre_musteri_cron.php',
+    'https://semrepanel.com.tr/yunusemre_fatura_olustur_cron.php',
+    'https://semrepanel.com.tr/yunusemrehepsijet.php',
+    'https://semrepanel.com.tr/yunusemrehepsijetbedelsiz.php'
 ];
 
 foreach ($urls as $url) {

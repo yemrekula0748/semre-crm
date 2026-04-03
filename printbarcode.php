@@ -11,8 +11,8 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-require_once '/home/hpanel-semre/htdocs/semre.hpanel.com.tr/vendor/autoload.php';
-require_once '/home/hpanel-semre/htdocs/semre.hpanel.com.tr/vendor/tecnickcom/tcpdf/tcpdf.php';
+require_once '/home/semrepanel/htdocs/semrepanel.com.tr/vendor/autoload.php';
+require_once '/home/semrepanel/htdocs/semrepanel.com.tr/vendor/tecnickcom/tcpdf/tcpdf.php';
 require_once 'DB.php';
 
 ?>

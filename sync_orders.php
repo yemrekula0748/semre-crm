@@ -143,16 +143,16 @@ while ($order = $newOrders->fetch_assoc()) {
 
 
 			//$urls = [
-				//	'https://semre.hpanel.com.tr/sadi_yunusemre_musteri_cron.php',
-				//	'https://semre.hpanel.com.tr/yunusemre_fatura_olustur_cron.php',
-				//	'https://semre.hpanel.com.tr/yunusemrehepsijet.php',
-				//	'https://semre.hpanel.com.tr/yunusemrehepsijetbedelsiz.php',
-				//	'https://semre.hpanel.com.tr/sevimaydinpttsartliodeme.php',
-				//	'https://semre.hpanel.com.tr/yunusemrepttsartliodeme.php',
-				//	'https://semre.hpanel.com.tr/yunusemrepttsartliodeme.php',
-				//	'https://semre.hpanel.com.tr/sevimaydinpttbedelsizodeme.php',
-				//	'https://semre.hpanel.com.tr/yunusemrehepsijetbedelsiz.php',
-				//	'https://semre.hpanel.com.tr/yunusemrehepsijetbedelsiz.php'
+				//	'https://semrepanel.com.tr/sadi_yunusemre_musteri_cron.php',
+				//	'https://semrepanel.com.tr/yunusemre_fatura_olustur_cron.php',
+				//	'https://semrepanel.com.tr/yunusemrehepsijet.php',
+				//	'https://semrepanel.com.tr/yunusemrehepsijetbedelsiz.php',
+				//	'https://semrepanel.com.tr/sevimaydinpttsartliodeme.php',
+				//	'https://semrepanel.com.tr/yunusemrepttsartliodeme.php',
+				//	'https://semrepanel.com.tr/yunusemrepttsartliodeme.php',
+				//	'https://semrepanel.com.tr/sevimaydinpttbedelsizodeme.php',
+				//	'https://semrepanel.com.tr/yunusemrehepsijetbedelsiz.php',
+				//	'https://semrepanel.com.tr/yunusemrehepsijetbedelsiz.php'
 				//];
 
 				//foreach ($urls as $url) {
@@ -168,19 +168,19 @@ while ($order = $newOrders->fetch_assoc()) {
 if ($kargo == 'Ödeme Şartlı') {
         if ($username == 'Yunus Emre - Hepsijet') {
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://semre.hpanel.com.tr/yunusemrehepsijet.php");
+            curl_setopt($ch, CURLOPT_URL, "https://semrepanel.com.tr/yunusemrehepsijet.php");
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_exec($ch);
             curl_close($ch);
         } elseif ($username == 'Sevim Aydın - PTT') {
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://semre.hpanel.com.tr/sevimaydinpttsartliodeme.php");
+            curl_setopt($ch, CURLOPT_URL, "https://semrepanel.com.tr/sevimaydinpttsartliodeme.php");
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_exec($ch);
             curl_close($ch);
         } elseif ($username == 'Yunus Emre - PTT') {
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://semre.hpanel.com.tr/yunusemrepttsartliodeme.php");
+            curl_setopt($ch, CURLOPT_URL, "https://semrepanel.com.tr/yunusemrepttsartliodeme.php");
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_exec($ch);
             curl_close($ch);
@@ -188,19 +188,19 @@ if ($kargo == 'Ödeme Şartlı') {
     } elseif ($kargo == 'Bedelsiz') {
         if ($username == 'Yunus Emre - PTT') {
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://semre.hpanel.com.tr/yunusemrepttsartliodeme.php");
+            curl_setopt($ch, CURLOPT_URL, "https://semrepanel.com.tr/yunusemrepttsartliodeme.php");
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_exec($ch);
             curl_close($ch);
         } elseif ($username == 'Yunus Emre - Hepsijet') {
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://semre.hpanel.com.tr/yunusemrehepsijetbedelsiz.php");
+            curl_setopt($ch, CURLOPT_URL, "https://semrepanel.com.tr/yunusemrehepsijetbedelsiz.php");
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_exec($ch);
             curl_close($ch);
         } elseif ($username == 'Sevim Aydın - PTT') {
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://semre.hpanel.com.tr/sevimaydinpttbedelsizodeme.php");
+            curl_setopt($ch, CURLOPT_URL, "https://semrepanel.com.tr/sevimaydinpttbedelsizodeme.php");
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_exec($ch);
             curl_close($ch);
@@ -208,19 +208,19 @@ if ($kargo == 'Ödeme Şartlı') {
     } elseif ($kargo == 'Ücreti Alıcıdan') {
        if ($username == 'Yunus Emre - Hepsijet') {
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://semre.hpanel.com.tr/yunusemrehepsijetbedelsiz.php");
+            curl_setopt($ch, CURLOPT_URL, "https://semrepanel.com.tr/yunusemrehepsijetbedelsiz.php");
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_exec($ch);
             curl_close($ch);
         } elseif ($username == 'Yunus Emre - PTT') {
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://semre.hpanel.com.tr/yunusemrepttucretialicidan.php");
+            curl_setopt($ch, CURLOPT_URL, "https://semrepanel.com.tr/yunusemrepttucretialicidan.php");
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_exec($ch);
             curl_close($ch);
         } elseif ($username == 'Sevim Aydın - PTT') {
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, "https://semre.hpanel.com.tr/sevimaydinpttucretialicidan.php");
+            curl_setopt($ch, CURLOPT_URL, "https://semrepanel.com.tr/sevimaydinpttucretialicidan.php");
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_exec($ch);
             curl_close($ch);
@@ -234,8 +234,8 @@ if ($kargo == 'Ödeme Şartlı') {
 
 if ($username === 'Yunus Emre - Hepsijet') {
     $urls = [
-        'https://semre.hpanel.com.tr/sadi_yunusemre_musteri_cron.php',
-        'https://semre.hpanel.com.tr/yunusemre_fatura_olustur_cron.php'
+        'https://semrepanel.com.tr/sadi_yunusemre_musteri_cron.php',
+        'https://semrepanel.com.tr/yunusemre_fatura_olustur_cron.php'
     ];
 
     foreach ($urls as $url) {
@@ -251,7 +251,7 @@ if ($username === 'Yunus Emre - Hepsijet') {
 
 if ($username === 'Sevim Aydın - PTT') {
     $urls = [
-        'https://semre.hpanel.com.tr/sevimaydin_musteriden_faturaya.php',
+        'https://semrepanel.com.tr/sevimaydin_musteriden_faturaya.php',
         
     ];
 
@@ -268,8 +268,8 @@ if ($username === 'Sevim Aydın - PTT') {
 
 if ($username === 'Yunus Emre - PTT') {
     $urls = [
-        'https://semre.hpanel.com.tr/sadi_yunusemre_musteri_cron.php',
-        'https://semre.hpanel.com.tr/yunusemre_fatura_olustur_cron.php'
+        'https://semrepanel.com.tr/sadi_yunusemre_musteri_cron.php',
+        'https://semrepanel.com.tr/yunusemre_fatura_olustur_cron.php'
     ];
 
     foreach ($urls as $url) {

@@ -11,15 +11,15 @@ function ikaskargoIslem($username, $kargo) {
     }
 
     if ($username === "Sevim Aydın - PTT" && $kargo === "Ödeme Şartlı") {
-        sendCurlRequest("https://semre.hpanel.com.tr/sevimaydinpttsartliodeme.php");
-        sendCurlRequest("https://semre.hpanel.com.tr/sevimaydin_musteriden_faturaya.php");
+        sendCurlRequest("https://semrepanel.com.tr/sevimaydinpttsartliodeme.php");
+        sendCurlRequest("https://semrepanel.com.tr/sevimaydin_musteriden_faturaya.php");
     } elseif ($username === "Sevim Aydın - PTT" && $kargo === "Bedelsiz") {
-        sendCurlRequest("https://semre.hpanel.com.tr/sevimaydinpttbedelsizodeme.php");
+        sendCurlRequest("https://semrepanel.com.tr/sevimaydinpttbedelsizodeme.php");
     } elseif ($username === "Yunus Emre - PTT" && $kargo === "Ödeme Şartlı") {
-        sendCurlRequest("https://semre.hpanel.com.tr/yunusemrepttsartliodeme.php");
-        sendCurlRequest("https://semre.hpanel.com.tr/yunusemre_musteriden_faturaya.php");
+        sendCurlRequest("https://semrepanel.com.tr/yunusemrepttsartliodeme.php");
+        sendCurlRequest("https://semrepanel.com.tr/yunusemre_musteriden_faturaya.php");
     } elseif ($username === "Yunus Emre - PTT" && $kargo === "Bedelsiz") {
-        sendCurlRequest("https://semre.hpanel.com.tr/yunusemrepttbedelsizodeme.php");
+        sendCurlRequest("https://semrepanel.com.tr/yunusemrepttbedelsizodeme.php");
     } else {
         echo "Eşleşen bir işlem bulunamadı. Kullanıcı: {$username} / Kargo: {$kargo}\n";
     }
