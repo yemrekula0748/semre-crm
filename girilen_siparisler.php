@@ -46,12 +46,14 @@ if (!isset($_SESSION['user_id'])) {
     
 
 
-	<script src="font.js"></script>
 	
 
 
 
     
+    <!-- DataTables CSS -->
+    <link href="assets/libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+
     <!-- SemreCRM Shared Theme -->
     <link href="assets/css/semrecrm.css" rel="stylesheet" type="text/css" />
 
@@ -227,7 +229,7 @@ $counter = 1; // Sayaç başlangıç değeri ?>
                                                 'Sevim Aydın - PTT' => 'Sevim Aydın',
 												'Yunus Emre - Hepsijet' => 'HepsiJET',
                                                 '' => 'İkas',
-                                                default => $row['null']
+                                                default => $row['hangikargo'] ?? ''
                                             };
 
                                             // Resmileşme durumu
@@ -2360,19 +2362,22 @@ document.addEventListener('DOMContentLoaded', function () {
     </script>
 
     <script>
-        document.getElementById('pageSearch').addEventListener('input', function () {
-            let filter = this.value.toUpperCase();
-            let rows = document.querySelectorAll('#datatable tbody tr');
+        const _psEl = document.getElementById('pageSearch');
+        if (_psEl) {
+            _psEl.addEventListener('input', function () {
+                let filter = this.value.toUpperCase();
+                let rows = document.querySelectorAll('#datatable tbody tr');
 
-            rows.forEach(row => {
-                let text = row.textContent || row.innerText;
-                if (text.toUpperCase().indexOf(filter) > -1) {
-                    row.style.display = ''; // Eşleşme varsa satırı göster
-                } else {
-                    row.style.display = 'none'; // Eşleşme yoksa satırı gizle
-                }
+                rows.forEach(row => {
+                    let text = row.textContent || row.innerText;
+                    if (text.toUpperCase().indexOf(filter) > -1) {
+                        row.style.display = ''; // Eşleşme varsa satırı göster
+                    } else {
+                        row.style.display = 'none'; // Eşleşme yoksa satırı gizle
+                    }
+                });
             });
-        });
+        }
     </script>
 
     
@@ -2571,7 +2576,10 @@ document.addEventListener('DOMContentLoaded', function () {
         <script src="assets/libs/jquery.counterup/jquery.counterup.min.js"></script>
         <script src="assets/libs/feather-icons/feather.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="assets/libs/jquery-ui/jquery-ui.min.js"></script>
+
+        <!-- DataTables JS -->
+        <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="assets/libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
         
         <!-- App js-->
         <script src="assets/js/app.js"></script>
@@ -2580,19 +2588,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <?php
     if (isset($_GET['status']) && isset($_GET['message'])) {
-        $status = $_GET['status'];
-        $message = $_GET['message'];
+        $status = preg_replace('/[^a-z]/', '', $_GET['status']);
+        $message = htmlspecialchars($_GET['message'], ENT_QUOTES, 'UTF-8');
         $icon = $status === 'success' ? 'success' : 'error';
+        $iconJson = json_encode($icon);
+        $messageJson = json_encode($message);
 
         echo "<script>
             document.addEventListener('DOMContentLoaded', function() {
                 Swal.fire({
-                    icon: '{$icon}',
-                    title: '{$message}',
+                    icon: {$iconJson},
+                    title: {$messageJson},
                     showConfirmButton: false,
                     timer: 2000
                 }).then(function() {
-                    // URL'den parametreleri kaldır
                     window.history.replaceState(null, null, window.location.pathname);
                 });
             });
