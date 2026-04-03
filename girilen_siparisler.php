@@ -261,18 +261,18 @@ $counter = 1; // Sayaç başlangıç değeri ?>
                                                     <?php endif; ?>
                                                 </td>
                                                 <td>
-    <?php if (!empty($row['kargo_barkodu']) && strpos($row['kargo_barkodu'], 'SMR') === 0): ?>
+    <?php if (empty($row['kargo_barkodu'])): ?>
+        <span class="badge rounded-pill text-bg-secondary">Oluşturuluyor</span>
+    <?php elseif (strpos($row['kargo_barkodu'], 'SMR') === 0): ?>
         <a href="https://www.hepsijet.com/gonderi-takibi/<?= htmlspecialchars($row['kargo_barkodu']) ?>" target="_blank">
             <?= htmlspecialchars($row['kargo_barkodu']) ?>
         </a>
-    <?php else: ?>
-        <?php if (!empty($row['kargolink'])): ?>
-            <a href="<?= htmlspecialchars($row['kargolink']) ?>" target="_blank">
-                <?= htmlspecialchars($row['kargo_barkodu']) ?>
-            </a>
-        <?php else: ?>
+    <?php elseif (!empty($row['kargolink'])): ?>
+        <a href="<?= htmlspecialchars($row['kargolink']) ?>" target="_blank">
             <?= htmlspecialchars($row['kargo_barkodu']) ?>
-        <?php endif; ?>
+        </a>
+    <?php else: ?>
+        <?= htmlspecialchars($row['kargo_barkodu']) ?>
     <?php endif; ?>
 </td>
 
